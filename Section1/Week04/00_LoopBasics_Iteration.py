@@ -110,3 +110,28 @@ print("-"*60)
 # Practice
 # Practice: print multiples of 4 up to 200
 print("-"*60)
+print("Practice: print multiples of 4 up to 200")
+for i in range(50):
+    print(i*4)
+
+print("-"*60)
+print("Practice: print multiples of 4 up to 200")
+i = 0
+while i <= 200:
+    print(i)
+    i += 4
+
+# Practice: print multiples of 4 up to 200
+print("-"*60)
+print("Practice: print multiples of 4 up to 200")
+for i in range(0, 201, 4):
+    print(i)
+
+
+# practice exponentiation of 2 up to 2^31
+# trivia: what does this number represent?
+
+print("-"*60)
+print("Practice: print exponentiation of 2 up to 2^31")
+for i in range(32):
+    print("2 to the power of", i, "is", 2**i)
