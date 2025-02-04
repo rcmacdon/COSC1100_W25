@@ -137,6 +137,11 @@ y = 15
 try:
     if (x > y):
         raise Exception("x cannot be greater than y")
+    else:
+        raise Exception("It actually worked and should not of raised an exception")
+    
+    # do the stuff
+    
 except Exception as e:
     print("An error occurred")
     print(e)

@@ -49,35 +49,37 @@ while play:
 
         guessAgain = True
         while guessAgain:
-            guess = input("Enter your guess: ")
 
-            # check if valid
-            if not guess.isdigit():
+            try:
+                guess = int(input("Enter your guess: "))
+            
+                if not 1 <= guess <= maxNumber:
+                    raise Exception("Invalid guess. Please try again.")
+                
+                numGuesses += 1
+
+                if guess == gameNumber:
+                    print("Congratulations! You got it right!")
+                    print("You guessed the number in", numGuesses, "attempts.")
+
+                    if input("Do you want to play again? (y/n):").lower() != "y":
+                        playAgain = False
+
+                    guessAgain = False
+                    continue
+
+                elif guess > gameNumber:
+                    print("Your guess is too high, guess again!")
+                else:
+                    print("Your guess is too low, guess again!")
+            except ValueError as v:
                 print("Invalid guess. Please try again.")
+            except Exception as e:
+                print(e)
+            finally:
                 continue
 
-            guess = int(guess)
-
-            if not 1 <= guess <= maxNumber:
-                print("Invalid guess. Please try again.")
-                continue
-
-            numGuesses += 1
-
-            if guess == gameNumber:
-                print("Congratulations! You got it right!")
-                print("You guessed the number in", numGuesses, "attempts.")
-
-                if input("Do you want to play again? (y/n):").lower() != "y":
-                    playAgain = False
-
-                guessAgain = False
-                continue
-
-            elif guess > gameNumber:
-                print("Your guess is too high, guess again!")
-            else:
-                print("Your guess is too low, guess again!")
+            
         # ---- end of guessAgain loop
 
     # ---- end of playAgain loop
