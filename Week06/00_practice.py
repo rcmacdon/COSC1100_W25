@@ -28,12 +28,13 @@ while tryAgain:
     except ZeroDivisionError as z:
         print(z)
     except Exception as e:
-        print(e)
+        print("An error occurred: " + str(e))
 
     #check if user wants to try again!
     tryAgain = input("Do you want to try again? (y/n)").lower() == "y"
 
 # -- end of loop
+
 print("Goodbye!")  
 exit()
 
@@ -47,8 +48,10 @@ exit()
 #   Check: Pseudo PASS
 # Test 4 - 3.9, 1.3 Expected Output: The numerator is divisible by the denominator
 #   Check: FAIL because of floating point error
+#   Check: PASS after casting to int and multiplying by 100
 # Test 5 - 3.9, 1.2 Expected Output: The numerator is not divisible by the denominator
 #   Check: FAIL because of floating point error
+#   Check: PASS after casting to int and multiplying by 100
 # Test 6 - 6, -2 Expected Output: The numerator is divisible by the denominator
 #   Check: PASS
 # Test 7 - -6, -2    Expected Output: The numerator is divisible by the denominator
@@ -65,9 +68,37 @@ exit()
 # Write a loop that prints even numbers between 50 and 10 backwards
     # use a for loop
     # use a while loop
+print("-"*30)
+for i in range(50, 9, -1):
+    if i % 2 == 0:
+        print(i)
 
+print("-"*30)
+for i in range(50, 9, -2):
+        print(i)
+
+print("-"*30)
+i = 50
+while i >= 10:
+    if i % 2 == 0:
+        print(i)
+    i -= 1
 
 # Write an if structure that determines if a number is positive, negative or zero
 
+i = 45
+if i > 0:
+    print("The number is positive")
+elif i < 0:
+    print("The number is negative")
+else:
+    print("The number is zero")
+
+# Write a program that prints the sum of all numbers between 1 and 100 that are divisible by 3
+sum = 0
+for i in range(1, 101):
+    if i % 3 == 0:
+        sum += i
+print("The sum of all numbers between 1 and 100 that are divisible by 3 is: %i" % sum)
 
 
