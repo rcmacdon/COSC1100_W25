@@ -9,15 +9,18 @@ tryAgain = True
 while tryAgain:
     try:
         # obtain input from user
-        numerator = float(input("Please enter the Numerator"))
-        denominator = float(input("Please enter the Denominator"))
+        print("-"*30)
+        print("Note: The following program works up to 2 decimal places only!")
+        numerator = float(input("Please enter the Numerator: "))
+        denominator = float(input("Please enter the Denominator: "))
 
         # check if the denominator is zero
         if denominator == 0:
-            raise("Cannot divide by zero")
+            raise ZeroDivisionError("Cannot divide by zero")
         
         # check if the numerator is divisible by the denominator
-        if round(numerator % denominator,1) == 0.0:
+        # casting to an integer after multiplying by 100 to avoid floating point errors
+        if round(int(numerator*100) % int(denominator*100),1) == 0.0:
             print("The numerator is divisible by the denominator")
         else:
             print("The numerator is not divisible by the denominator")
@@ -43,9 +46,9 @@ exit()
 # Test 3 - 10, 0    Expected Output: Cannot divide by zero
 #   Check: Pseudo PASS
 # Test 4 - 3.9, 1.3 Expected Output: The numerator is divisible by the denominator
-#   Check: FAIL
+#   Check: FAIL because of floating point error
 # Test 5 - 3.9, 1.2 Expected Output: The numerator is not divisible by the denominator
-#   Check: FAIL
+#   Check: FAIL because of floating point error
 # Test 6 - 6, -2 Expected Output: The numerator is divisible by the denominator
 #   Check: PASS
 # Test 7 - -6, -2    Expected Output: The numerator is divisible by the denominator
