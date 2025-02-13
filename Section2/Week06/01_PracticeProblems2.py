@@ -2,7 +2,7 @@
 # Practice Problems 2 
 # Feb. 13, 2025
 # ------------------------------------
-# 1. Write a loop that takes a list of numbers and returns the sum of all the numbers in the list.
+# 1. Write a loop that adds up the numbers between a start number and an end number.  The numbers can be constants or input from the user.
 
 
 
