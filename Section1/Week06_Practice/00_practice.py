@@ -95,10 +95,10 @@ else:
     print("The number is zero")
 
 # Write a program that prints the sum of all numbers between 1 and 100 that are divisible by 3
-sum = 0
+total = 0
 for i in range(1, 101):
     if i % 3 == 0:
-        sum += i
+        total += i
 print("The sum of all numbers between 1 and 100 that are divisible by 3 is: %i" % sum)
 
 
