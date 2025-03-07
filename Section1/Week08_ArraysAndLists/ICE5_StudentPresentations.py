@@ -5,7 +5,6 @@
 # Purpose: To demonstrate your knowledge of arrays and lists in Python.
 # ------------------------------------------
 
-#region declarations
 #region Declarations
 studentList = []
 ALLOW_DUPLICATES = False
