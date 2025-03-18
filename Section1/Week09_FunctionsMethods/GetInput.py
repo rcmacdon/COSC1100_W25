@@ -47,7 +47,7 @@ def getIntegerRange(prompt: str, minValue: int, maxValue: int):
                 raise ValueError
             else:
                 return value
-            return value
+            
         except ValueError as ve:
             print("Invalid input. Please enter a whole number between %i and %i." % (minValue, maxValue))
 
