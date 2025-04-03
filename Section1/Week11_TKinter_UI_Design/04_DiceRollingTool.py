@@ -127,6 +127,14 @@ def isValid():
         return False
 
     # clear results function
+
+def extract_list_from_listbox():
+    '''This function will extract the list of results from the listbox'''
+    results = []
+    for i in range(lbxResults.size()):
+        results.append(lbxResults.get(i))
+    return results
+
 #endregion
 
 #endregion
